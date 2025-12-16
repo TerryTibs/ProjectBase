@@ -1,0 +1,13 @@
+    1.Add "cnn_dqn_tf" to the AGENTS dictionary in training_script.py, pointing to the CNN_DQN_Agent class imported from cnn_dqn_agent_tf.py.
+
+    2. Modify the __init__ method of TrainingScript to handle the cnn_dqn_tf agent type. This will involve:
+
+        Checking if the selected agent type is cnn_dqn_tf.
+
+        If it is, instantiating the CNN_DQN_Agent with the appropriate state_size (which should be the screen size).
+
+    3.Modify the train method of TrainingScript to handle the cnn_dqn_tf agent type. This will involve:
+
+        Checking if the agent type is cnn_dqn_tf or cnn_dqn when getting the state and next state. If it is, get the screen; otherwise, get the game state.
+
+    4.Address the .keras saving issue. Modify the save and load methods to explicitly include the .keras extension, as we discussed previously.
